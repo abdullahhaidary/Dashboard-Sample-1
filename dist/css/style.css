@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+header{
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0 20px;
+    height:5vh;
+    z-index:1;
+    width:100%;
+    position:fixed;
+}
+header .logo{
+    margin-left:auto;
+}
+header #responsive-menu-icon{
+    font-size:20px;
+    display:none;
+    color:white;
+}
+#hideMenu{
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+header h3{
+    color: white;
+}
+.menu{
+    width:20%;
+    height:95vh;
+    position:fixed;
+    background-color:white;
+    top: 5vh;
+    box-shadow:5px 5px 5px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease-in-out;
+}
+.menu .menu-head{
+    display:flex;
+    justify-content: space-evenly;
+    height:15vh;
+}
+.menu-head>div{
+    width:160px;
+}
+.menu-head>i{
+    position:absolute;
+    right:0;
+    padding:0.5vh 0.5vh;
+    top:0;
+}
+.menu .menu-head img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.menu-body{
+}
+i{
+    cursor:pointer;
+}
+.menu-body ul{
+    /* padding-top:1vh; */
+    display:block;
+    margin:0;
+    width:100%;
+    /* flex-direction: column; */
+    /* flex-basis:100%;
+    align-items:flex-start;
+    justify-content: space-between; */
+    height:50vh;
+    padding:0;
+}
+.menu-body ul li{
+    display:block;
+    padding:0.5vh 5vh;
+    width:100%;
+}
+.menu-body ul li:hover{
+    cursor:pointer;
+    background-color: #ccc;
+}
+.menu-active{
+    color:white;
+    background-color:#2196F3
+}
+.menu-active:hover{
+    color:black;
+    
+}
+
+.body-section{
+    width: calc(80% - 10px);
+    padding-left:10px;
+    margin-left:20%;
+    padding-top:5vh;
+    /* overflow-y:auto; */
+    background-color: #f1f1f1;
+}
+.containerr{
+    /* display:flex; */
+}
+
+.menu-hidden {
+    transform: translateX(-100%);
+}
+.menu-hidden-show{
+    position:absolute;
+    top:0;
+    left:0;
+    color:white;
+}
+
+.header-row{
+    display:grid;
+    gap:20px;
+    height:20vh; 
+    width:100%;
+    grid-template-columns: repeat(4,1fr);
+}
+.body-second-section{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    column-gap: 20px;
+    padding:3vh;
+}
+.body-second-section img{
+    width:100%;
+    height:285px;
+}
+.table-section table{
+    border:1px solid #ccc;
+}
+.table-section button{
+    background-color: black;
+    opacity:0.8;
+}
+.table-section button:hover{
+    opacity:1;
+}
+.recent-users{
+    display:grid;
+
+}
+.single-recent-user{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border-bottom:1px solid rgba(0,0,0,0.4);
+}
+.single-recent-user img{
+    height:35px;
+    width:35px;
+    border-radius: 50%;
+
+}
+.recent-comments div>img{
+    height:70px;
+    width:70px;
+    border-radius: 50%;
+}
+
+.recent{
+    box-shadow: 3px 3px 1px rgba(0,0,0,0.3)
+                -1px -1px -1px rgba(0,0,0,0.2);
+    padding:3vh 2vh;
+    background-color: blue;
+}
+.recent-users:last-child{
+    border-bottom:none;
+}
+
+.above-footer{
+    height:15veh;
+    width:100%;
+    position:static;
+    background-color: #616161;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+@media(max-width:1015px){
+    #menu{
+        left:-17%;
+    }
+    .body-section{
+        width:95%;
+        margin-left:5%;
+    }
+}
+@media( max-width:640px){
+    header{
+        position:fixed;
+    }
+    header #responsive-menu-icon{
+        font-size:20px;
+        display:inline;
+        color:white;
+    }
+    .menu{
+        display:none;
+    }
+    .body-section{
+        width: 100%;
+        padding:30px 20px;
+        margin-left:0;
+    }
+    .header-row{
+        display:grid;
+        height:auto; 
+        margin-left:0;
+        padding-left:0;
+        gap:20px;
+        grid-template-columns:1fr;
+    }
+    .body-second-section{
+        display:grid;
+        width:100%;
+        grid-template-columns:1fr;
+        column-gap: 20px;
+        padding:3vh;
+    }
+    .above-footer{
+        height:auto;
+        width:100%;
+        position:static;
+        background-color: #616161;
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows:1fr 1fr 1fr;
+        gap:10px;
+    }
+    .above-footer div{
+        border-bottom:2px white solid;
+    }
+    .above-footer div:last-child{
+        border-bottom:none;
+    }
+    .menu-head>i{
+        display:none;
+    }
+}
+.above-footer hr{
+    height:10px;
+}
